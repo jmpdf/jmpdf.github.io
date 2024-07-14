@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(31, 31, 31);
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.sel {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgb(46, 46, 46);
+    display: flex;
+
+}
+
+.element {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    padding: 7px;
+    width: auto;
+    color: white;
+}
+
+.sel div:hover:not(.last):not(.destaque) {
+    background-color: rgb(56, 56, 56);
+}
+
+.last {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-bottom: 1px gray solid;
+    display: inline-block;
+    color: white;
+    width: 100%;
+}
+
+.destaque {
+    border-bottom-width: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    padding: 7px;
+    width: auto;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    border-bottom: rgb(31, 31, 31) 1px solid;
+    position: relative;
+    cursor: default;
+}
+
+.title {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5%;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: inline-block;
+
+}
+.texto{
+    margin: 30px;
+}
