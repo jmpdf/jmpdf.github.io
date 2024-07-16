@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projeto5</title>
     <script type='text/javascript' async="async" src="/parser.js"></script>
     <link rel="stylesheet" href="/mystyle.css">
     <style>
-        .created{
+        .created {
             margin-top: 10px;
         }
-        .created div{
+
+        .created div {
             display: inline-block;
             padding: 3px;
             border: 1px gray solid;
             width: 20%;
+            background-color: rgb(20, 20, 20);
         }
     </style>
 </head>
+
 <body>
     <div class="sel">
-        <a href="/index.html"><div class="element">Inicio</div></a><!--
-        --><a href="subpage1.html"><div class="destaque">Atividades</div></a><!--    
-        --><a href="subpage2.html"><div class="element">pagina2</div></a>
+        <a href="/index.html">
+            <div class="element">Inicio</div>
+        </a><!--
+        --><a href="subpage1.html">
+            <div class="destaque">Atividades</div>
+        </a><!--    
+        --><a href="subpage2.html">
+            <div class="element">pagina2</div>
+        </a>
         <div class="last"></div>
-        
+
     </div>
-    <div class="created">
-        <div>Nome</div><div>Data de entrega</div><div>Materia</div><div>Status</div>
+    
+
+    <button type="button" class="colapsavel" id="afazer">A FAZER</button>
+    <div id="conteinerfazer" style="display: inline-block;">
+        <div class="created">
+            <div>Nome</div><div>Data de entrega</div><div>Materia</div><div>Status</div>
+        </div>
+    </div>
+    <button type="button" class="colapsavel" id="jafeitos">JÁ FEITOS</button>
+    <div class="conteudo" id="conteinerfeitos">
+        <div class="created">
+            <div>Nome</div><div>Data de entrega</div><div>Materia</div><div>Status</div>
+        </div>
     </div>
 </body>
+
 </html>
