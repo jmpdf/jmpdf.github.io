@@ -15,7 +15,7 @@ async function start() {
     tablejson = JSON.parse(tablejson).table;
     console.log(tablejson);
     tablejson.rows.forEach(element => {
-        if (element.c[0].v == "NOME") {} else {
+        if (element.c[0].v == "NOME") { } else {
             var containter = document.createElement("div");
             var elnome = document.createElement("div");
             elnome.textContent = element.c[0].v;
@@ -24,16 +24,35 @@ async function start() {
             var elmat = document.createElement("div");
             elmat.textContent = element.c[2].v;
             var elstats = document.createElement("div");
-            elstats.textContent = tablejson.rows[1].c[3].v;
+            elstats.textContent = element.c[3].v;
             containter.classList.add("created");
             containter.appendChild(elnome);
             containter.appendChild(eldata);
             containter.appendChild(elmat);
             containter.appendChild(elstats);
-            document.body.appendChild(containter);
+            if (elstats.textContent == "feito") {
+                document.getElementById('conteinerfeitos').appendChild(containter);
+            } else {
+                document.getElementById('conteinerfazer').appendChild(containter);
+            }
         }
     });
 
 }
+var todos = document.getElementsByClassName("colapsavel");
+for (let i = 0; i < todos.length; i++) {
+    const element = todos[i];
+    element.addEventListener("click",
+        function () {
+            var conteudo = this.nextElementSibling;
+            if (conteudo.style.display === "inline-block") {
+                conteudo.style.display = "none";
+            } else {
+                conteudo.style.display = "inline-block";
+            }
+        }
+    )
+}
+
 
 start();
