@@ -15,7 +15,7 @@ const monthNames = ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
 var agora  = new Date();
 
 async function upload(){
-  const filesha = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+  const filesha = await octokit.rest.repos.getContent({
     owner: 'testebancodedados',
     repo: 'anotacoesEscola',
     path: (agora.getFullYear() + '/' + monthNames[agora.getMonth()] + '/'+agora.getDate()+'.txt')
