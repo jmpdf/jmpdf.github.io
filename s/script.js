@@ -36,7 +36,9 @@ async function getfile(dataArquivo){
     repo: 'anotacoesEscola',
     path: (dataArquivo.getFullYear() + '/' + monthNames[dataArquivo.getMonth()] + '/'+dataArquivo.getDate()+'.txt')
   })
-  return atob(file.data.content);
+  var str = file.data.content;
+  str = str.replace(/\s/g, '');
+  return decodeURIComponent(escape(window.atob(str))); //deprecated, change it in the future.
 }
 document.getElementById("aaa").addEventListener("click",function() {
   console.log(upload());
