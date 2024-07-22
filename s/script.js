@@ -15,20 +15,19 @@ const monthNames = ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
 var agora  = new Date();
 
 async function upload(){
-  const filesha = await octokit.rest.repos.getContent({
+  /*const filesha = await octokit.rest.repos.getContent({
     owner: 'testebancodedados',
     repo: 'anotacoesEscola',
     path: (agora.getFullYear() + '/' + monthNames[agora.getMonth()] + '/'+agora.getDate()+'.txt')
   })
   console.log(filesha);
-
+  */
   await octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
     owner: 'testebancodedados',
     repo: 'anotacoesEscola',
     path: (agora.getFullYear() + '/' + monthNames[agora.getMonth()] + '/'+agora.getDate()+'.txt'),
     message: ('Atualização do dia '+agora.getDate() + ' de ' +monthNames[agora.getMonth()] +' de ' + agora.getFullYear()),
-    content: btoa(document.getElementById("texto").value),
-    sha: filesha.data.sha
+    content: btoa(document.getElementById("texto").value)
   })  
 }
 async function getfile(dataArquivo){
