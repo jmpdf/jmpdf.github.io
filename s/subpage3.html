@@ -12,6 +12,12 @@
     <title>projeto5</title>
     <link rel="stylesheet" href="/mystyle.css">
     <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.2.2.min.js"></script>
+    <style>
+        #messages{
+            text-align: start;
+            margin-left: 30%;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +38,7 @@
 
     </div>
     <br><br><br>
-    <form id="input-form">
+    <form autocomplete="off" id="input-form">
         <label for="message"></label>
         <input type="text" id="message" name="message"><br><br>
         <input type="submit" value="enviar">
